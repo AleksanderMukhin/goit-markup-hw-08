@@ -266,14 +266,22 @@ body {
 }
 .connection__link:hover, .connection__link:focus {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--activity-link-color);
 }
 @media screen and (min-width: 1200px) {
   .connection__link {
+    font-size: 14px;
     padding: 32px 0;
+  }
+  .connection__link:hover, .connection__link:focus {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--activity-link-color);
   }
 }
 
