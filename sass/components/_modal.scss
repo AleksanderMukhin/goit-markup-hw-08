@@ -8,9 +8,9 @@
   transition: opacity 300ms linear, visibility 300ms linear;
 
   &.is-hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
+    opacity: 0;
+    pointer-events: none;
+  }
   
 }
 
@@ -34,7 +34,7 @@
 
   @include desktop {
     min-width: 528px;
-    max-height: 581px;
+    min-height: 581px;
   }
 }
 

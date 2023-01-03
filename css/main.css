@@ -295,6 +295,7 @@ body {
   top: 0px;
   left: 0px;
   z-index: 1;
+  overflow: auto;
   width: 100vw;
   height: 100vh;
   background-color: var(--background-general);
@@ -717,7 +718,7 @@ body {
 @media screen and (min-width: 1200px) {
   .modal {
     min-width: 528px;
-    max-height: 581px;
+    min-height: 581px;
   }
 }
 
