@@ -1,0 +1,24 @@
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--activity-link-color);
+  text-decoration: none;
+
+  @include desktop {
+    font-size: 26px;
+  }
+}
+
+.logo--bleu-black {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--logo-studio-secondo-color);
+
+  @include desktop {
+    font-size: 26px;
+  }
+}

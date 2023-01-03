@@ -1,0 +1,238 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 300ms linear, visibility 300ms linear;
+
+  &.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+}
+
+.modal {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+
+  width: 90vw;
+  max-height: 609px;
+
+  background: var(--background-general);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @include tel {
+    max-width: 450px ;
+  }
+
+  @include desktop {
+    min-width: 528px;
+    max-height: 581px;
+  }
+}
+
+.btn-close {
+  display: flex;
+  border-radius: 50%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0000001A;
+  background-color: transparent;
+  top: 8px;
+  right: 8px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: var(--activity-link-color);
+    }
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primery-text-color);
+  margin-bottom: 12px;
+}
+
+.modal-item {
+  display: block;
+
+  & label {
+      display: block;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+      color: var(--discription-color);
+      margin-bottom: 10px;
+    }
+}
+
+.modal-input-icon {
+  position: relative;
+  margin-top: 4px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+      border-color: var(--activity-link-color);
+      outline: transparent;
+
+       & + svg {
+          fill: var(--activity-link-color);
+        }
+    }
+}
+
+
+
+.form-comment {
+  margin-bottom: 20px;
+
+  & label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--discription-color);
+  }
+}
+
+textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.comment-field {
+  width: 100%;
+  margin-top: 4px;
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  resize: none;
+
+    &:focus,
+    &:hover {
+      border-color: var(--activity-link-color);
+    }
+}
+
+.form-checkbox {
+  @include font($fs:12, $lh:1.71);
+
+  color: var(--discription-color);
+  margin-bottom: 30px;
+  @include desktop {
+    @include font($fs: 14, $lh: 1.71);
+  }
+}
+
+.form-link {
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #2196F3;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 18%;
+    width: 100%;
+    height: 1px;
+    background-color: var(--activity-link-color);
+  }
+}
+
+.modal-politic-label {
+  display: inline-block;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  & > span {
+      display: inline;
+      margin-right: 8px;
+    }
+
+  &::before {
+      content: '';
+      display: inline-block;
+      align-items: baseline;
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--primery-text-color);
+      border-radius: 2px;
+      margin-right: 8px;
+      margin-bottom: -3px;
+    }
+}
+
+.modal-politic-check:checked+label::before {
+  border: none;
+  background-image: url('../images/checkw.svg');
+  background-color: var(--activity-link-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-btn {
+  display: block;
+  min-width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--btn-activity-color);
+}

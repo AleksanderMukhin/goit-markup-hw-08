@@ -1,0 +1,48 @@
+.activity {
+  background-color: var(--background-general);
+
+  display: none;
+
+  &.global {
+      background-color: var(--background-general);
+      padding-top: 0px;
+    }
+  
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.activity__title {
+  @include font();
+  margin-bottom: 50px;
+}
+
+.activity__list {
+  @include centeredFlex();
+}
+
+.activity__card {
+  position: relative;
+}
+
+.activity__pre-title {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  color: var(--background-general);
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  padding: 27px 0;
+
+  @include font($fs:14, $lh:1.14);
+  text-transform: uppercase;
+}
+
+.activity__item {
+  max-width: calc((100% - 60px) / 3);
+
+  &:not(:last-child) {
+      margin-right: 30px;
+    }
+}

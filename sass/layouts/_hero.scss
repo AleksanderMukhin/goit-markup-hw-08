@@ -1,0 +1,98 @@
+.hero {
+  background: var(--hero-background);
+  text-align: center;
+  padding-bottom: 118px;
+  background-image: linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)), url(../images/header_mob.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url(../images/header_mob-2x.jpg);
+    }
+
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  @media screen and (min-width: 768px) {
+      background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url(../images/header_tabl.jpg);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: linear-gradient(to right,
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)), url(../images/header_tabl-2x.jpg);
+        }
+    }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right,
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)), url(../images/bg-hero-2X.jpg);
+      }
+  }
+}
+
+.hero .container {
+  padding: 0;
+}
+
+.hero__title {
+  @include font($fs: 22, $lh: 1.6, $ls: 0.06);
+  
+  font-weight: 700;
+  color: var(--btn-activity-color);
+  max-width: 340px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 58px;
+
+  @media screen and (min-width: 1200px) {
+    @include font($fs: 44, $lh: 1.36, $ls: 0.06);
+    min-width: 696px;
+    padding-top: 106px;
+    }
+
+}
+
+.hero__btn {
+  font-family: inherit;
+  font-weight: 700;
+  @include font($fs:16, $lh:1.9, $ls:0.06);
+
+  color: var(--btn-activity-color);
+  background: var(--activity-link-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+      padding: 10px 32px;
+      min-width: 216px;
+    }
+}

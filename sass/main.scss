@@ -1,0 +1,20 @@
+@import './utils/mixin';
+@import './base/reset';
+@import './utils/variables';
+@import './components/logo';
+@import './base/hidden';
+@import './base/container';
+
+
+@import './components/header';
+@import './components/footer';
+@import './components/modal';
+
+@import './layouts/hero';
+@import './layouts/quality';
+@import './layouts/activity';
+@import './layouts/team';
+@import './layouts/client';
+
+@import './layouts/portfolio';
+
