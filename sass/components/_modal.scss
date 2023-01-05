@@ -7,11 +7,12 @@
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 300ms linear, visibility 300ms linear;
 
+  overflow: auto;
+
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
-  }
-  
+  }  
 }
 
 .modal {
